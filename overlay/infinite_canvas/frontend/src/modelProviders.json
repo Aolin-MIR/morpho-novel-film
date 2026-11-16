@@ -1,0 +1,183 @@
+{
+  "qwen": {
+    "label": "阿里云百炼",
+    "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+    "models": [
+      {
+        "id": "qwen3.8-flash",
+        "label": "Qwen Flash",
+        "thinking": "enable"
+      },
+      {
+        "id": "qwen-plus",
+        "label": "Qwen Plus",
+        "thinking": "enable"
+      },
+      {
+        "id": "qwen3.8-max-0902",
+        "label": "Qwen Max",
+        "thinking": "enable"
+      },
+      {
+        "id": "deepseek-v4-flash-0731",
+        "label": "DeepSeek Flash · 百炼",
+        "thinking": "enable"
+      }
+    ]
+  },
+  "openai": {
+    "label": "OpenAI 官方",
+    "endpoint": "https://api.openai.com/v1/chat/completions",
+    "models": [
+      {
+        "id": "gpt-4.1",
+        "label": "GPT-4.1",
+        "thinking": "none"
+      },
+      {
+        "id": "gpt-4.1-mini",
+        "label": "GPT-4.1 mini",
+        "thinking": "none"
+      },
+      {
+        "id": "gpt-5.4",
+        "label": "GPT-5.4",
+        "thinking": "effort"
+      }
+    ]
+  },
+  "deepseek_official": {
+    "label": "DeepSeek 官方",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "models": [
+      {
+        "id": "deepseek-flash",
+        "label": "DeepSeek Flash",
+        "thinking": "type"
+      },
+      {
+        "id": "deepseek-pro",
+        "label": "DeepSeek Pro",
+        "thinking": "type"
+      }
+    ]
+  },
+  "siliconflow": {
+    "label": "硅基流动",
+    "endpoint": "https://api.siliconflow.cn/v1/chat/completions",
+    "models": [
+      {
+        "id": "Qwen/Qwen3-32B",
+        "label": "Qwen3 32B",
+        "thinking": "enable"
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V3",
+        "label": "DeepSeek V3",
+        "thinking": "none"
+      }
+    ]
+  },
+  "volcengine": {
+    "label": "火山引擎 · 方舟",
+    "endpoint": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+    "models": [
+      {
+        "id": "doubao-seed-1-6-250615",
+        "label": "豆包 Seed 1.6",
+        "thinking": "type"
+      }
+    ]
+  },
+  "zhipu": {
+    "label": "智谱 BigModel",
+    "endpoint": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+    "models": [
+      {
+        "id": "glm-4.7",
+        "label": "GLM-4.7",
+        "thinking": "type"
+      }
+    ]
+  },
+  "moonshot": {
+    "label": "月之暗面 · Kimi",
+    "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+    "models": [
+      {
+        "id": "kimi-k2.5",
+        "label": "Kimi K2.5",
+        "thinking": "type"
+      }
+    ]
+  },
+  "minimax": {
+    "label": "MiniMax 官方",
+    "endpoint": "https://api.minimaxi.com/v1/chat/completions",
+    "models": [
+      {
+        "id": "MiniMax-M2.5",
+        "label": "MiniMax M2.5",
+        "thinking": "always"
+      }
+    ]
+  },
+  "qianfan": {
+    "label": "百度智能云 · 千帆",
+    "endpoint": "https://qianfan.baidubce.com/v2/chat/completions",
+    "models": [
+      {
+        "id": "ernie-4.0-turbo-8k",
+        "label": "ERNIE 4.0 Turbo",
+        "thinking": "none"
+      }
+    ]
+  },
+  "anthropic": {
+    "label": "Anthropic · Claude",
+    "endpoint": "https://api.anthropic.com/v1/messages",
+    "protocol": "anthropic",
+    "models": [
+      {
+        "id": "claude-sonnet-4-5",
+        "label": "Claude Sonnet 4.5",
+        "thinking": "budget"
+      }
+    ]
+  },
+  "gemini": {
+    "label": "Google · Gemini",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+    "protocol": "gemini",
+    "models": [
+      {
+        "id": "gemini-2.5-flash",
+        "label": "Gemini 2.5 Flash",
+        "thinking": "gemini_budget"
+      }
+    ]
+  },
+  "deepseek": {
+    "label": "阿里云百炼 · DeepSeek（旧设置）",
+    "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+    "models": [
+      {
+        "id": "deepseek-v4-flash-0731",
+        "label": "DeepSeek Flash",
+        "thinking": "enable"
+      }
+    ],
+    "hidden": true
+  },
+  "hunyuan": {
+    "label": "腾讯云 · 混元",
+    "endpoint": "https://api.hunyuan.cloud.tencent.com/v1/chat/completions",
+    "models": [
+      {
+        "id": "hunyuan-turbos-latest",
+        "label": "混元 TurboS",
+        "thinking": "none"
+      }
+    ]
+  }
+}

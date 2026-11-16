@@ -1,0 +1,111 @@
+diff --git a/infinite_canvas/backend/app.py b/infinite_canvas/backend/app.py
+index a688c6c..4ba03ab 100755
+--- a/infinite_canvas/backend/app.py
++++ b/infinite_canvas/backend/app.py
+@@ -297,7 +297,7 @@ def _apply_cors_headers(response):
+         response.headers['Access-Control-Allow-Origin'] = origin
+         response.headers['Access-Control-Allow-Credentials'] = 'true'
+         response.headers['Vary'] = 'Origin'
+-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization,X-Morpho-Provider,X-Morpho-Api-Key,X-Morpho-Qwen-Api-Key,X-Morpho-Qwen-Workspace-Id'
++    response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization,X-Morpho-Provider,X-Morpho-Api-Key,X-Morpho-Qwen-Api-Key,X-Morpho-Qwen-Workspace-Id,X-Morpho-Model,X-Morpho-Thinking,X-Video-Api-Key'
+     response.headers['Access-Control-Allow-Methods'] = 'GET,PUT,POST,DELETE,OPTIONS,PATCH'
+     return response
+ 
+@@ -652,7 +652,9 @@ def _enqueue_generation_request(generation_type, payload):
+     if not user or not project:
+         return jsonify({'error': 'Login required for queued generation.'}), 401
+     credential = credential_from_headers(request.headers)
+-    if os.getenv('MORPHO_BYOK_REQUIRED') == '1' and credential is None:
++    local_film = (generation_type == 'video_prompts' and payload.get('film_kind')
++                  and __import__('local_story_gateway').available())
++    if os.getenv('MORPHO_BYOK_REQUIRED') == '1' and credential is None and not local_film:
+         return jsonify({'error': '请先添加自己的模型 API Key'}), 400
+ 
+     if generation_type != 'source_preparation' and getattr(g, 'workspace_validation_issues', None):
+@@ -698,7 +700,8 @@ def _enqueue_generation_request(generation_type, payload):
+         )
+ 
+     workspace_payload = {} if generation_type == 'source_preparation' else _payload_for_workspace()
+-    workspace_hash = _workspace_payload_hash(workspace_payload)
++    # Compare against the exact persisted revision, not its normalized runtime representation.
++    workspace_hash = _current_persisted_workspace_hash() or _workspace_payload_hash(workspace_payload)
+     request_payload = dict(sanitized_payload or {})
+     request_payload['workspace_hash'] = workspace_hash
+     run_id = create_generation_run(user['id'], project['id'], generation_type, request_payload)
+@@ -1174,6 +1177,8 @@ def generation_run_status(run_id):
+         and heartbeat_age is not None
+         and heartbeat_age <= max(30.0, float(os.getenv('GENERATION_STALE_SECONDS', '180')))
+     )
++    if record.get('generation_type') == 'video_prompts' and 'novel_source' in (record.get('request_payload') or {}):
++        record['request_payload'] = {key: value for key, value in record['request_payload'].items() if key != 'novel_source'}
+     if record.get('generation_type') == 'script_adaptation':
+         original = record.get('request_payload') or {}
+         packet = original.get('packet') or {}
+@@ -13283,7 +13270,7 @@ register_video_workflow(app, _payload_for_workspace)
+ 
+ def _video_package_progress(title, done, total):
+     _emit_workflow_status(flow='script_generation', stage='video_prompts', title=title,
+-                          detail=f'{done}/{total} 场；只生成制作提示词', status='running',
++                          detail=f'{done}/{total}', status='running',
+                           progress=5 + int(85 * done / max(total, 1)))
+ 
+ 
+@@ -13319,17 +13306,51 @@ def video_prompt_package():
+ @app.route('/video-prompts/generate', methods=['POST'])
+ def generate_video_prompts():
+     g.skip_workspace_autosave = True
+-    if request.headers.get('X-Internal-Queue') != '1':
+-        from video_prompts import options
++    from novel_film import generate as generate_novel_film, validate_source
++    from video_prompts import generate, options
++
++    if request.headers.get('X-Internal-Queue') != '1' or not getattr(g, 'workspace_base_hash', None):
++        if not getattr(g, 'current_user', None) or not getattr(g, 'current_project', None):
++            return jsonify({'error': '请先进入项目。'}), 401
+         try:
+-            options((request.json or {}).get('video_options'))
+-        except ValueError as exc:
++            if request.mimetype == 'multipart/form-data':
++                uploaded = request.files.get('file')
++                source = request.form.get('source', '')
++                title = request.form.get('title', '').strip()
++                if uploaded and uploaded.filename:
++                    raw = uploaded.read(4 * 1024 * 1024 + 1)
++                    if len(raw) > 4 * 1024 * 1024:
++                        raise ValueError('小说文件超过 4 MB，请按卷上传。')
++                    source, metadata = read_novel(raw, uploaded.filename)
++                    title = title or metadata.get('title') or Path(uploaded.filename).stem
++                data = {'novel_source': source, 'novel_title': title, 'film_kind': request.form.get('film_kind'),
++                        'video_options': json.loads(request.form.get('video_options', '{}'))}
++            else:
++                data = request.get_json() or {}
++            settings = options(data.get('video_options'), default_style='printmaking' if data.get('film_kind') else 'cinema')
++            data = {'video_options': settings, **{key: data[key] for key in
++                    ('novel_source', 'novel_title', 'film_kind') if key in data}}
++            if 'film_kind' in data or 'novel_source' in data:
++                validate_source(data.get('novel_source'), data.get('film_kind'))
++                data['novel_title'] = str(data.get('novel_title') or '小说短片')[:160]
++                import local_story_gateway
++                if local_story_gateway.enabled():
++                    if not local_story_gateway.available():
++                        raise ValueError('本机尚未配置小说分镜的文本密钥。')
++                elif not current_credential() or not current_credential().get('key'):
++                    raise ValueError('请先填写用于阅读小说和分镜的模型密钥。')
++        except (ValueError, zipfile.BadZipFile, TypeError) as exc:
+             return jsonify({'error': str(exc)}), 400
+-        return _enqueue_generation_request('video_prompts', request.json or {})
++        return _enqueue_generation_request('video_prompts', data)
++
+     try:
+-        from video_prompts import generate
+         workspace = _payload_for_workspace()
+-        package = generate(workspace, (request.json or {}).get('video_options'), _video_package_progress)
++        data = request.get_json() or {}
++        if 'film_kind' in data:
++            package = generate_novel_film(workspace, data['novel_source'], data['novel_title'],
++                                          data['film_kind'], data['video_options'], _video_package_progress)
++        else:
++            package = generate(workspace, data.get('video_options'), _video_package_progress)
+         _ensure_workspace_not_stale()
+         workspace.setdefault('workspace_meta', {})['video_package'] = package
+         save_workspace_state(g.current_user['id'], g.current_project['id'], workspace)
