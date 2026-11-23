@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>成片 · 电影制作台</title>
+<link rel="stylesheet" href="/studio.css">
+<link rel="stylesheet" href="/screenings.css?v=study-classification-1">
+<script src="/screenings.js?v=study-classification-1" defer></script>
+</head>
+<body>
+<header class="mast">
+  <a class="wordmark" href="/">电影制作台</a>
+  <nav class="screening-links" aria-label="放映导航"><a class="screening-nav" href="/screenings">成片</a><a class="screening-nav" href="/review-films">审看与试片</a></nav>
+</header>
+<main id="screening" class="screening-main">
+  <div class="screening-head">
+    <p id="edition" class="eyebrow" hidden></p>
+    <h1 id="heading">成片</h1>
+    <p id="intro" class="screening-intro" hidden></p>
+  </div>
+  <p id="screening-message" role="status"></p>
+  <div id="screening-library" hidden>
+    <section id="long-films" class="screening-group" hidden>
+      <h2>长版成片</h2>
+      <div class="screening-library"></div>
+    </section>
+    <section id="short-films" class="screening-group" hidden>
+      <h2>短版成片</h2>
+      <div class="screening-library"></div>
+    </section>
+    <section id="aesthetic" class="screening-group" hidden>
+      <h2>美学方法试片</h2>
+      <div class="screening-library"></div>
+    </section>
+    <section id="methods" class="screening-group" hidden><h2>美学方法索引</h2></section>
+  </div>
+  <section id="screening-player" hidden>
+    <video id="feature-video" controls playsinline preload="metadata" aria-label="影片"></video>
+    <div class="director-head">
+      <h2>导演剪辑字幕</h2>
+      <div class="director-actions"><button id="director-toggle" type="button" aria-expanded="true" aria-controls="director-body">收起</button>
+      <a id="director-file" download>下载字幕</a></div>
+    </div>
+    <div id="director-body" class="director-body">
+      <div class="director-cue" aria-live="polite">
+        <div class="director-meta"><span id="cue-time"></span><h3 id="cue-title"></h3></div>
+        <p id="cue-line"></p>
+        <dl id="cue-craft"></dl>
+      </div>
+      <nav id="screening-chapters" class="screening-chapters" aria-label="场次"></nav>
+    </div>
+    <section class="film-script" id="film-script" aria-labelledby="script-heading">
+      <div class="director-head"><h2 id="script-heading">影片台本</h2>
+        <button id="script-all" type="button" hidden>展开全部场次</button>
+      </div>
+      <p id="script-note"></p>
+      <details id="script-origins" hidden open>
+        <summary>台本来源与制作方法</summary>
+        <dl id="script-sources"></dl>
+      </details>
+      <div id="script-scenes"></div>
+    </section>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "basis": "项目现有 catalog.json 全量保留 01–80 编号。类别按条目在目录中的主要职能判定。艺术风格与试片的归属分别取证，方向关联供选用，不能作为成片风格或已审结论。",
+  "catalog_source": "skills/film-art-direction/references/catalog.json",
+  "catalog_sha256": "6ce5ab85a710dd5ddb2f0020429729835633b43cdd3068ecee3b3b378b496cb0",
+  "related_method_basis": "verified_method_ids 只列实际已审条目的 method_id 或 related_method_ids 引用，空列表表示当前无引用。局部机制已审不能证明整个流派、宽泛方向或目录提案验证。",
+  "classification_sources": [
+    "https://www.vam.ac.uk/articles/a-beginners-guide-to-brutalism",
+    "https://www.moma.org/collection/terms/film/experimentation-in-film-the-avant-garde",
+    "https://www.moma.org/calendar/film/5375",
+    "https://www.moma.org/documents/moma_press-release_387228.pdf"
+  ],
+  "catalog_entries": [
+    {
+      "id": "01",
+      "name": "空间主义 Spatialism",
+      "kind": "art-style",
+      "directions": [
+        "画面表面与画外空间"
+      ],
+      "basis": "丰塔纳等人的艺术运动；电影里的切口揭示是具体转译。",
+      "verified_method_ids": [],
+      "source": "https://www.museoreinasofia.es/en/collections/artwork/concetto-spaziale-spatial-concept-1/"
+    },
+    {
+      "id": "02",
+      "name": "光与空间 Light and Space",
+      "kind": "art-style",
+      "directions": [
+        "感知空间"
+      ],
+      "basis": "源于南加州的艺术运动；通过光、表面与空间边界作用于知觉。",
+      "verified_method_ids": [
+        "staged-light-depth"
+      ]
+    },
+    {
+      "id": "03",
+      "name": "欧普艺术 Op Art",
+      "kind": "art-style",
+      "directions": [
+        "视觉感知"
+      ],
+      "basis": "以图案和对比造成视觉错觉的艺术运动。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "04",
+      "name": "动力艺术 Kinetic Art",
+      "kind": "art-style",
+      "directions": [
+        "物质运动"
+      ],
+      "basis": "围绕真实或可感运动展开的艺术运动与创作传统。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "05",
+      "name": "极简主义 Minimalism",
+      "kind": "art-style",
+      "directions": [
+        "形式节制"
+      ],
+      "basis": "此条指极简主义历史风格，少道具或留白本身可另作具体手法。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "06",
+      "name": "色域绘画 Color Field",
+      "kind": "art-style",
+      "directions": [
+        "色彩氛围"
+      ],
+      "basis": "色域绘画是经确立的绘画流派；影像中可借大面积色彩改变关系。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "07",
+      "name": "不可能建筑",
+      "kind": "expression-direction",
+      "directions": [
+        "空间陌生化"
+      ],
+      "basis": "用无法统一解释的透视或路径经营场所，目录提供多个可选实现。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "08",
+      "name": "递归嵌套 Mise en abyme",
+      "kind": "technique",
+      "directions": [
+        "自反叙事",
+        "时间错位"
+      ],
+      "basis": "在同一画面递归嵌入同类结构，可为各深度设置时间偏移。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "09",
+      "name": "非场所 Non-place",
+      "kind": "expression-direction",
+      "directions": [
+        "场所疏离"
+      ],
+      "basis": "从场所理论转译空间中转、匿名与失根的经验。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "10",
+      "name": "阈限空间 Liminal Space",
+      "kind": "expression-direction",
+      "directions": [
+        "空间悬念",
+        "场所疏离"
+      ],
+      "basis": "门槛、过渡或悬置的空间感，可由多种构图与声场实现。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "11",
+      "name": "异托邦 Heterotopia",
+      "kind": "expression-direction",
+      "directions": [
+        "场所与制度"
+      ],
+      "basis": "把规则不同的空间关系转成可感的场所；源自空间理论。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "12",
+      "name": "心理地理 Psychogeography",
+      "kind": "expression-direction",
+      "directions": [
+        "场所与情绪"
+      ],
+      "basis": "从行走路径与感受的联系组织城市影像。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "13",
+      "name": "形而上绘画",
+      "kind": "art-style",
+      "directions": [
+        "日常陌生化"
+      ],
+      "basis": "形而上绘画是历史绘画流派；空置广场与异常阴影是可能的画面依据。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "14",
+      "name": "粗野主义 Brutalism",
+      "kind": "art-style",
+      "directions": [
+        "尺度崇高",
+        "建筑与制度"
+      ],
+      "basis": "确立的建筑风格；影片可运用可见结构与粗粝材料，具体实现仍看镜头。",
+      "verified_method_ids": [
+        "linked-floors"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "废墟美学",
+      "kind": "expression-direction",
+      "directions": [
+        "时间与遗存"
+      ],
+      "basis": "以残损形态和空间空置呈现时间及人类活动退场。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "16",
+      "name": "幽灵学 Hauntology",
+      "kind": "expression-direction",
+      "directions": [
+        "时间与遗存"
+      ],
+      "basis": "以时代残留和反复出现的痕迹组织经验，源自文化理论。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "17",
+      "name": "复写本式叠写 Palimpsest",
+      "kind": "expression-direction",
+      "directions": [
+        "时间与记忆",
+        "物证揭示"
+      ],
+      "basis": "连续承载面上显露不同层次；实物揭层与空间年代变换需各自取证。",
+      "verified_method_ids": [
+        "physical-paper-layers"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "双重曝光／叠印",
+      "kind": "technique",
+      "directions": [
+        "主观感知",
+        "时间与记忆"
+      ],
+      "basis": "通过曝光或合成把可读层次叠在同一画面。",
+      "verified_method_ids": [
+        "transparent-memories-overlay"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "运动分解／连续摄影",
+      "kind": "technique",
+      "directions": [
+        "时间与运动"
+      ],
+      "basis": "将连续动作分解为多相位或轮廓，便于比较运动。",
+      "verified_method_ids": [
+        "freeze-afterimage-evidence"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "局部时间异步",
+      "kind": "technique",
+      "directions": [
+        "时间错位"
+      ],
+      "basis": "固定画面关系后给不同区域分配不同时间映射。",
+      "verified_method_ids": [
+        "time-stops-at-column"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "微差循环",
+      "kind": "technique",
+      "directions": [
+        "时间错位"
+      ],
+      "basis": "复用同一行动序列并改变一个可辨的变量。",
+      "verified_method_ids": [
+        "one-time-loop-variable"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "逆熵／局部倒流",
+      "kind": "technique",
+      "directions": [
+        "时间错位"
+      ],
+      "basis": "只让明确隔开的对象或区域反序，保留参照区域的常时。",
+      "verified_method_ids": [
+        "local-reverse-action"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "环境衰老",
+      "kind": "technique",
+      "directions": [
+        "时间与遗存"
+      ],
+      "basis": "固定空间几何，分段呈现材料老化及累积迹象。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "24",
+      "name": "负形与缺席",
+      "kind": "expression-direction",
+      "directions": [
+        "缺席与痕迹"
+      ],
+      "basis": "可用空位、负形、阴影或环境回应显现缺席者。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "25",
+      "name": "故障艺术 Glitch Art",
+      "kind": "expression-direction",
+      "directions": [
+        "媒介自反",
+        "数字物质"
+      ],
+      "basis": "目录描述数字故障审美实践与几种不同执行。须按实际故障规律确认具体手法。",
+      "verified_method_ids": [],
+      "source": "https://networkcultures.org/_uploads/NN%234_RosaMenkman.pdf"
+    },
+    {
+      "id": "26",
+      "name": "数据揉搓 Datamoshing",
+      "kind": "technique",
+      "directions": [
+        "数字物质"
+      ],
+      "basis": "利用压缩预测与帧间数据改变运动和纹理延续。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "27",
+      "name": "像素排序 Pixel Sorting",
+      "kind": "technique",
+      "directions": [
+        "数字物质"
+      ],
+      "basis": "按亮度或其他像素键值重新排列局部像素。",
+      "verified_method_ids": [],
+      "source": "https://github.com/kimasendorf/ASDFPixelSort"
+    },
+    {
+      "id": "28",
+      "name": "狭缝扫描 Slit-scan",
+      "kind": "technique",
+      "directions": [
+        "时间与运动"
+      ],
+      "basis": "通过空间窄缝累积不同时间的画面采样。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "29",
+      "name": "视频反馈 Video Feedback",
+      "kind": "technique",
+      "directions": [
+        "数字物质",
+        "自反叙事"
+      ],
+      "basis": "将上一轮画面回送成像或处理系统，形成持续反馈。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "30",
+      "name": "贫穷图像 Poor Image",
+      "kind": "expression-direction",
+      "directions": [
+        "媒介自反"
+      ],
+      "basis": "传播、复制及压缩损耗承担表达；低分辨率本身只是一种处理。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "31",
+      "name": "操作性影像 Operational Images",
+      "kind": "expression-direction",
+      "directions": [
+        "观看与制度"
+      ],
+      "basis": "图像参与识别、测量、判断或控制；可由多种具体界面行为体现。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "32",
+      "name": "点云／未完成世界",
+      "kind": "technique",
+      "directions": [
+        "数字物质"
+      ],
+      "basis": "目录的可执行机制是点云采样与密度控制，未完成感是潜在方向。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "33",
+      "name": "艳俗 Kitsch",
+      "kind": "expression-direction",
+      "directions": [
+        "消费与欲望"
+      ],
+      "basis": "以现成的情感符号与艳俗质感经营消费或认同关系。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "34",
+      "name": "坎普 Camp",
+      "kind": "expression-direction",
+      "directions": [
+        "形式夸饰"
+      ],
+      "basis": "以夸饰、表演意识和装腔组织观看，可借多种造型。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "35",
+      "name": "波普艺术 Pop Art",
+      "kind": "art-style",
+      "directions": [
+        "消费与欲望",
+        "图像转义"
+      ],
+      "basis": "从大众传播与商业图像取材的已确立艺术运动。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "36",
+      "name": "极繁主义 Maximalism",
+      "kind": "expression-direction",
+      "directions": [
+        "形式密度"
+      ],
+      "basis": "依靠图案、色彩与物件累积建立视觉密度。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "37",
+      "name": "蒸汽波 Vaporwave",
+      "kind": "expression-direction",
+      "directions": [
+        "媒介怀旧"
+      ],
+      "basis": "线上文化及音乐视觉风格的转译，目录使用旧界面、扫描与循环。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "38",
+      "name": "复古未来主义 Retrofuturism",
+      "kind": "expression-direction",
+      "directions": [
+        "媒介怀旧",
+        "历史想象"
+      ],
+      "basis": "以往日对未来的图像及材料构成虚构未来世界。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "39",
+      "name": "超真实／拟像 Hyperreality",
+      "kind": "expression-direction",
+      "directions": [
+        "真实与拟像"
+      ],
+      "basis": "让复制、展示和实物的关系主导观看判断，源自文化理论。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "40",
+      "name": "挪用与转义 Détournement",
+      "kind": "technique",
+      "directions": [
+        "图像转义"
+      ],
+      "basis": "利用熟悉图像、文字或声音结构，改变其使用关系和意义。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "41",
+      "name": "意大利电影新现实主义",
+      "kind": "art-style",
+      "directions": [
+        "日常写实",
+        "社会空间"
+      ],
+      "basis": "意大利战后电影运动。目录标签仅供参考，单镜写实表演不足以确认为该流派。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "42",
+      "name": "法国新现实主义",
+      "kind": "art-style",
+      "directions": [
+        "消费与日常物"
+      ],
+      "basis": "法国新现实主义是历史视觉艺术运动，与意大利电影新现实主义各有特定语境。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "43",
+      "name": "贫穷艺术 Arte Povera",
+      "kind": "art-style",
+      "directions": [
+        "日常材料"
+      ],
+      "basis": "意大利贫穷艺术运动，以普通和非传统材料等重审艺术生产。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "44",
+      "name": "物派 Mono-ha",
+      "kind": "art-style",
+      "directions": [
+        "材料与空间"
+      ],
+      "basis": "日本物派艺术运动，重视材料之间及其所在场所的关系。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "45",
+      "name": "现成物／装配艺术",
+      "kind": "technique",
+      "directions": [
+        "日常材料",
+        "图像转义"
+      ],
+      "basis": "把取得的日常物品作为现成物或组合材料。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "46",
+      "name": "撕贴／剥贴 Décollage",
+      "kind": "technique",
+      "directions": [
+        "物证揭示",
+        "图像转义"
+      ],
+      "basis": "通过撕除或剥离上层显出下层图像及残痕。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "47",
+      "name": "过程艺术 Process Art",
+      "kind": "art-style",
+      "directions": [
+        "物质运动",
+        "时间与遗存"
+      ],
+      "basis": "历史上的过程艺术强调材料和制作行为在结果中的作用。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "48",
+      "name": "自毁艺术 Auto-destructive Art",
+      "kind": "art-style",
+      "directions": [
+        "物质消逝"
+      ],
+      "basis": "有明确历史来源的自毁艺术实践；片中数字侵蚀只是一种模拟实现。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "49",
+      "name": "超现实主义 Surrealism",
+      "kind": "art-style",
+      "directions": [
+        "梦境与联想"
+      ],
+      "basis": "有明确历史谱系的艺术运动；超现实奇观并不自动归为该运动。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "50",
+      "name": "魔幻现实主义",
+      "kind": "expression-direction",
+      "directions": [
+        "日常陌生化"
+      ],
+      "basis": "目录采用现实布景和生活逻辑容纳持续异常，属于此处的叙事表达方式。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "51",
+      "name": "诡异感 Uncanny",
+      "kind": "expression-direction",
+      "directions": [
+        "日常陌生化",
+        "主观感知"
+      ],
+      "basis": "从熟悉事物的微小异常产生不安，可由多种手法达成。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "52",
+      "name": "表现主义 Expressionism",
+      "kind": "art-style",
+      "directions": [
+        "主观感知",
+        "情绪投射"
+      ],
+      "basis": "确立的艺术和电影传统，可用偏斜几何、强明暗或投影传递主观关系。",
+      "verified_method_ids": [
+        "expressionist-oblique-light",
+        "shadow-body-asynchrony"
+      ]
+    },
+    {
+      "id": "53",
+      "name": "自主影子＊",
+      "kind": "technique",
+      "directions": [
+        "表现主义投影",
+        "主观感知"
+      ],
+      "basis": "目录自拟试验，用独立调度或合成令投影与投影者的运动分离。",
+      "verified_method_ids": [
+        "shadow-body-asynchrony"
+      ]
+    },
+    {
+      "id": "54",
+      "name": "镜像背叛＊",
+      "kind": "technique",
+      "directions": [
+        "主观感知",
+        "日常陌生化"
+      ],
+      "basis": "目录自拟试验，通过分层表演或合成打破镜像同步。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "55",
+      "name": "情绪性物理＊",
+      "kind": "expression-direction",
+      "directions": [
+        "情绪投射"
+      ],
+      "basis": "目录自拟构想，让形变、气候、材质或运动规律受情绪驱动。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "56",
+      "name": "通感式设计 Synaesthetic Design",
+      "kind": "technique",
+      "directions": [
+        "跨感官联想"
+      ],
+      "basis": "把明确的声学信号映射到色彩、光、形变或运动。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "57",
+      "name": "立体主义 Cubism",
+      "kind": "art-style",
+      "directions": [
+        "多视点",
+        "形式对照"
+      ],
+      "basis": "确立的艺术运动；影视多视点只是可选转译。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "58",
+      "name": "水墨空间",
+      "kind": "expression-direction",
+      "directions": [
+        "形式节制",
+        "场所与情绪"
+      ],
+      "basis": "借水墨传统的墨色、渗化和留白建构空间，目录名称涵盖多种风格。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "59",
+      "name": "木刻／版画式影像",
+      "kind": "expression-direction",
+      "directions": [
+        "材料质感",
+        "形式对照"
+      ],
+      "basis": "将木刻与版画的视觉特征转成影像，具体策划可选刻线、套色或层次简化。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "60",
+      "name": "拼贴／剪纸世界",
+      "kind": "technique",
+      "directions": [
+        "材料质感",
+        "空间陌生化"
+      ],
+      "basis": "以纸片图层、切边、接触阴影和视差来组成画面。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "61",
+      "name": "具体诗／文字物质化",
+      "kind": "technique",
+      "directions": [
+        "文字与画面"
+      ],
+      "basis": "沿目录的具体实现，将文字作为可遮挡、接触并受光的空间对象。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "62",
+      "name": "档案艺术／档案叙事",
+      "kind": "expression-direction",
+      "directions": [
+        "档案与证词"
+      ],
+      "basis": "用文献及其缺口组织信息与叙述；目录中包括多种呈现机制。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "63",
+      "name": "擦除／涂黑美学",
+      "kind": "technique",
+      "directions": [
+        "缺席与痕迹",
+        "档案与证词"
+      ],
+      "basis": "以涂盖、移除及保留残余痕迹改变画面可读范围。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "64",
+      "name": "官僚迷宫＊",
+      "kind": "expression-direction",
+      "directions": [
+        "场所与制度"
+      ],
+      "basis": "目录自拟构想，手续与空间增殖共同表现制度压力。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "65",
+      "name": "泛灵式世界 Animistic World",
+      "kind": "expression-direction",
+      "directions": [
+        "生态与非人视角"
+      ],
+      "basis": "组织非人和物件的行为与视点，目录用形变、声响、位移来转译。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "66",
+      "name": "生物形态建筑",
+      "kind": "expression-direction",
+      "directions": [
+        "生态与非人视角",
+        "空间陌生化"
+      ],
+      "basis": "以有机分枝与曲面组织建筑外观和尺度。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "67",
+      "name": "菌丝接管＊",
+      "kind": "technique",
+      "directions": [
+        "生态与非人视角",
+        "物质运动"
+      ],
+      "basis": "目录自拟试验，将蔓延限定在明确接触点及连续路径。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "68",
+      "name": "矿化记忆＊",
+      "kind": "expression-direction",
+      "directions": [
+        "时间与记忆",
+        "物质运动"
+      ],
+      "basis": "目录自拟构想，将记忆转译为材料生长或沉积的可见过程。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "69",
+      "name": "尺度异化",
+      "kind": "expression-direction",
+      "directions": [
+        "尺度陌生化"
+      ],
+      "basis": "用人和地平线等基准改变空间大小的读法，可采用多种取景或造型机制。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "70",
+      "name": "错置重力＊",
+      "kind": "technique",
+      "directions": [
+        "空间陌生化"
+      ],
+      "basis": "目录自拟试验，按对象或区域改变垂直基准和运动方向。",
+      "verified_method_ids": [
+        "local-gravity-inversion"
+      ]
+    },
+    {
+      "id": "71",
+      "name": "熵与秩序的可视化",
+      "kind": "expression-direction",
+      "directions": [
+        "秩序与失序"
+      ],
+      "basis": "把排列、扰动与重组对应叙事变量，可由不同技术实现。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "72",
+      "name": "崇高 Sublime",
+      "kind": "expression-direction",
+      "directions": [
+        "尺度崇高"
+      ],
+      "basis": "美学范畴，关注人与宏大景象的比例或感知落差。",
+      "verified_method_ids": [
+        "staged-light-depth",
+        "window-scale"
+      ]
+    },
+    {
+      "id": "73",
+      "name": "布莱希特式间离",
+      "kind": "expression-direction",
+      "directions": [
+        "自反叙事",
+        "观看与制度"
+      ],
+      "basis": "戏剧理论及其表达目的；可通过装置显露、换景或表演转换实现。",
+      "verified_method_ids": [
+        "stage-machinery-reveal"
+      ]
+    },
+    {
+      "id": "74",
+      "name": "活画 Tableau Vivant",
+      "kind": "technique",
+      "directions": [
+        "形式对照",
+        "群像调度"
+      ],
+      "basis": "通过演员姿态与站位形成近静止画面和内部关系。",
+      "verified_method_ids": [
+        "ensemble-tableau-shift"
+      ]
+    },
+    {
+      "id": "75",
+      "name": "剖面屋／玩偶屋",
+      "kind": "technique",
+      "directions": [
+        "空间关系",
+        "建筑与制度",
+        "空间层次"
+      ],
+      "basis": "把建筑内不同用途或楼层放入统一剖面取景，再用连续动作或结构交代联系。",
+      "verified_method_ids": [
+        "linked-floors"
+      ]
+    },
+    {
+      "id": "76",
+      "name": "黑箱剧场",
+      "kind": "technique",
+      "directions": [
+        "形式节制",
+        "群像调度"
+      ],
+      "basis": "目录以黑背景、少道具和分区光组织站位及换景。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "77",
+      "name": "扩展电影 Expanded Cinema",
+      "kind": "expression-direction",
+      "directions": [
+        "媒介自反",
+        "多视点"
+      ],
+      "basis": "跨多屏、现场和装置的放映实践，目录提供一类投射转译。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "78",
+      "name": "结构电影 Structural Film",
+      "kind": "art-style",
+      "directions": [
+        "形式自反",
+        "形式对照"
+      ],
+      "basis": "确立的实验电影潮流，以可感知的整体结构为重。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "79",
+      "name": "叙事越界 Metalepsis",
+      "kind": "technique",
+      "directions": [
+        "自反叙事",
+        "文字与画面"
+      ],
+      "basis": "在层级规则先成立后，通过表演与合成改变叙事边界。",
+      "verified_method_ids": []
+    },
+    {
+      "id": "80",
+      "name": "多联画／分屏复调",
+      "kind": "technique",
+      "directions": [
+        "形式对照",
+        "空间关系"
+      ],
+      "basis": "并置多个画面，用时间及位置依据明确它们如何可比。",
+      "verified_method_ids": []
+    }
+  ]
+}

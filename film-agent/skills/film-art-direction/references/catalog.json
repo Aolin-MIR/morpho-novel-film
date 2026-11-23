@@ -1,0 +1,874 @@
+[
+  {
+    "id": "01",
+    "name": "空间主义 Spatialism",
+    "group": "光、空间与观看",
+    "example": "一场正常的家庭争吵中，整幅画面被划开，裂口后是被隐瞒的另一段生活。",
+    "method": "混合：正常视频贴到三维平面；切开网格、卷起边缘，后方放另一空间。静机位可用二维裂口遮罩。",
+    "priority": true,
+    "status": "当前可用",
+    "purpose": "打开画面表面，让角色看到遮挡背后的反证。",
+    "prompt": "固定机位对齐两层，让帘、纸或屏幕裂缝成为揭示的边界。",
+    "signals": [
+      "stationary-plate",
+      "concealed-layer",
+      "physical-threshold"
+    ],
+    "tool": "portal",
+    "source": "https://www.museoreinasofia.es/en/collections/artwork/concetto-spaziale-spatial-concept-1/"
+  },
+  {
+    "id": "02",
+    "name": "光与空间 Light and Space",
+    "group": "光、空间与观看",
+    "example": "房间边角和地平线逐渐消失，人物失去距离感，像悬浮在颜色里面。",
+    "method": "三维／合成：无缝背景、柔光、雾与低对比材质，逐渐移除阴影和空间边界。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "03",
+    "name": "欧普艺术 Op Art",
+    "group": "光、空间与观看",
+    "example": "地砖、窗格、墙纸形成视觉振动，人物越焦虑，空间越难辨认。",
+    "method": "代码：条纹、同心圆、摩尔纹与微小相位变化；将图案贴在场景表面，保持人物清晰。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "04",
+    "name": "动力艺术 Kinetic Art",
+    "group": "光、空间与观看",
+    "example": "窗、墙、吊挂物按自己的节奏移动，人物必须在空间的“呼吸间隙”行动。",
+    "method": "三维：为少量建筑模块设置旋转、平移和周期曲线；人物动作围绕这些周期安排。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "05",
+    "name": "极简主义 Minimalism",
+    "group": "光、空间与观看",
+    "example": "空间只剩一把椅子、一扇门；谁能坐下、谁靠近门，直接表达权力。",
+    "method": "AI／三维：减少物件和材质种类，精确设计距离、尺度、留白与站位。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让物件数量和距离直说关系。",
+    "prompt": "选择一件行动必须经过的道具，以景深和阻隔安排人。",
+    "signals": [
+      "limited-objects",
+      "spatial-power"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "06",
+    "name": "色域绘画 Color Field",
+    "group": "光、空间与观看",
+    "example": "一种颜色缓慢占据房间，亲密关系像被某种情绪淹没。",
+    "method": "合成：大面积色块、渐变与区域遮罩；让颜色变化附着于墙面和光线，单独保护肤色。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "07",
+    "name": "不可能建筑",
+    "group": "光、空间与观看",
+    "example": "上完楼梯回到原层；走出右边的门，却从左边进入同一房间。",
+    "method": "三维／剪辑：特定视点的错觉布景、门户连接、门框遮挡剪接；明确设计入口与出口关系。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "08",
+    "name": "递归嵌套 Mise en abyme",
+    "group": "光、空间与观看",
+    "example": "电视里出现同一个房间，里面的电视又出现同一房间；最深一层的人先行动。",
+    "method": "代码／合成：同一视频逐层缩放、透视贴入，给各层不同时间偏移；通常两三层就能成立。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "09",
+    "name": "非场所 Non-place",
+    "group": "城市与场所",
+    "example": "主角逃进不同酒店，每间房却完全一样；所有人只叫他的房号。",
+    "method": "AI＋合成：复用同一空间骨架，仅替换窗外、号码和少量道具；服务动作与广播重复出现。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "由空间持续用同一种方式称呼人，使匿名关系可见。",
+    "prompt": "复用门距、广播句式和展签位置，给不同人物各自真实动作。",
+    "signals": [
+      "standardized-space",
+      "anonymous-role"
+    ],
+    "tool": "edit"
+  },
+  {
+    "id": "10",
+    "name": "阈限空间 Liminal Space",
+    "group": "城市与场所",
+    "example": "闭馆泳池、凌晨学校、永不到站的候车厅；人物被困在某种人生过渡中。",
+    "method": "AI＋合成：固定或缓慢移动的空景；只改变门缝、灯光、远处物件，持续保留环境声。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "11",
+    "name": "异托邦 Heterotopia",
+    "group": "城市与场所",
+    "example": "同一建筑里并置婚宴、病房、审判室；每个空间实行不同秩序。",
+    "method": "混合：各空间分别制作，用门、帘幕和走位连接；用不同声音、服装与行为规则加强差异。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "12",
+    "name": "心理地理 Psychogeography",
+    "group": "城市与场所",
+    "example": "越不想见某个人，道路越把主角带到那个人家门口。",
+    "method": "三维／剪辑：少量街道模块重新组合，以情绪节点组织路线，保持走向和视线连贯。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "13",
+    "name": "形而上绘画",
+    "group": "城市与场所",
+    "example": "空广场、长阴影、拱廊、孤立雕像；事情还没发生，空间已经像在等待。",
+    "method": "AI／三维：固定太阳角度、延长阴影、减少人物；让一个远处的小动作打破静止。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "14",
+    "name": "粗野主义 Brutalism",
+    "group": "城市与场所",
+    "example": "巨大的混凝土结构压住人物；行政机构、家庭或企业像不可动摇的实体。",
+    "method": "三维＋AI材质：大体块、重复孔洞、深阴影，利用人物尺度和低机位形成压迫。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "15",
+    "name": "废墟美学",
+    "group": "城市与场所",
+    "example": "仍在营业的商场逐层变成遗址，人物继续按旧习惯生活。",
+    "method": "混合：同一建筑制作完好与衰败版本，用区域遮罩渐进替换；保留少量仍工作的设施。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "16",
+    "name": "幽灵学 Hauntology",
+    "group": "城市与场所",
+    "example": "未兑现的未来继续播放：废弃社区的屏幕仍宣传“明日幸福生活”。",
+    "method": "AI＋合成＋声音：旧未来主义场景、失效设备、过期广告和循环广播，让承诺与现状共存。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "17",
+    "name": "复写本式叠写 Palimpsest",
+    "group": "时间、记忆与残留",
+    "example": "揭起诊室新墙纸的一角，露出仍粘在同一面墙上的旧花纹。旧层改变人物对房间来历的判断。",
+    "method": "实拍或 H3 可拍局部揭开；合成须对齐同一承载面。以揭边、擦拭或斜光建立触发，两个时代的痕迹在同一位置共存。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让过去残留在稳定的当下，而后改变一个判断。",
+    "prompt": "先建立纸边和旧层的少量预兆。只在动作抵达的承载面揭露旧痕，保留接触、遮挡、阴影及周围布景。",
+    "signals": [
+      "stationary-plate",
+      "historical-trace",
+      "aligned-plates"
+    ],
+    "tool": "portal"
+  },
+  {
+    "id": "18",
+    "name": "双重曝光／叠印",
+    "group": "时间、记忆与残留",
+    "example": "人物身体里流动着另一座城市，脸上出现一段无法忘记的生活。",
+    "method": "合成：人物轮廓作遮罩，内部放第二段视频；用透明度、亮度混合，保留眼睛和嘴部细节。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "19",
+    "name": "运动分解／连续摄影",
+    "group": "时间、记忆与残留",
+    "example": "一个动作的多个阶段同时存在，人物被自己的决定包围。",
+    "method": "代码：提取不同时间的主体层，按原位置或设计位置叠加；控制数量、透明度和消失顺序。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "20",
+    "name": "局部时间异步",
+    "group": "时间、记忆与残留",
+    "example": "同桌吃饭的人拥有不同速度：孩子飞快长大，母亲仍在盛同一碗饭。",
+    "method": "合成：各人物或区域分别重定时；固定机位、干净空景和简单遮挡最容易实现。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "21",
+    "name": "微差循环",
+    "group": "时间、记忆与残留",
+    "example": "主角反复回家，每次只多一双筷子，直到餐桌坐满不存在的人。",
+    "method": "剪辑／代码：复用基础镜头，按循环次数添加局部变化，接点匹配动作相位。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "22",
+    "name": "逆熵／局部倒流",
+    "group": "时间、记忆与残留",
+    "example": "杯子重新聚合，水流回杯中，人物却仍记得争吵。",
+    "method": "合成：物件或环境倒放，人物保持正向；先设计各层之间不难处理的接触关系。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "23",
+    "name": "环境衰老",
+    "group": "时间、记忆与残留",
+    "example": "人物等一个电话，房间在等待中发霉、褪色、长满灰尘。",
+    "method": "AI＋三维：固定几何，准备多阶段材质；用扩散遮罩表现霉变、锈蚀和墙面脱落。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "24",
+    "name": "负形与缺席",
+    "group": "时间、记忆与残留",
+    "example": "人不见了，但沙发仍凹陷，雨中仍有一个拥抱的空洞。",
+    "method": "合成／三维：移除人物并补背景，保留物体反应和阴影；雨中空洞用不可见遮挡体制作。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "25",
+    "name": "故障艺术 Glitch Art",
+    "group": "故障、编码与数字物质",
+    "example": "荒诞法庭预先用板上三条色带规定证词顺序。书记官改动编号时，同样的三条色带把证词分成相互矛盾的版本，再落回被划掉的名字。",
+    "method": "代码：RGB 通道错位、横向切片、帧冻结，限定作用区域与触发时刻。",
+    "priority": true,
+    "status": "当前可用",
+    "purpose": "在荒诞片或已经建立可辨形式的段落，把媒介的异常变成观众读得懂的视觉规则。",
+    "prompt": "让观众先看到形式铺垫，用具体动作触发；按可辨的色彩、构图和节奏规律组织失真，最后留下可读结果。普通电视和短暂跳帧不足以说明设计意图。",
+    "signals": [
+      "evidence-conflict",
+      "protected-face"
+    ],
+    "tool": "glitch",
+    "source": "https://networkcultures.org/_uploads/NN%234_RosaMenkman.pdf",
+    "requires_glitch_intent": true
+  },
+  {
+    "id": "26",
+    "name": "数据揉搓 Datamoshing",
+    "group": "故障、编码与数字物质",
+    "example": "已经进入新场景，旧场景的像素仍被当前动作拖着走。",
+    "method": "代码：用 FFglitch 修改压缩域运动向量；或用光流拖拽制作明确标注的视觉模拟。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "27",
+    "name": "像素排序 Pixel Sorting",
+    "group": "故障、编码与数字物质",
+    "example": "人脸、衣物、建筑变成细长色柱，像被某种分类制度“整理”过。",
+    "method": "代码：对行或列中的连续像素段按亮度排序，用遮罩控制范围和渐变强度。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "用可见的归类行为改变图像材料。",
+    "prompt": "在有明确角色的标牌或账页上排序完整像素，保留无受力的肤色和四角。",
+    "signals": [
+      "recorded-medium",
+      "visible-classification",
+      "protected-face"
+    ],
+    "tool": "pixel-sort",
+    "source": "https://github.com/kimasendorf/ASDFPixelSort",
+    "requires_glitch_intent": true
+  },
+  {
+    "id": "28",
+    "name": "狭缝扫描 Slit-scan",
+    "group": "故障、编码与数字物质",
+    "example": "门左边是现在，右边是几秒以前；人物穿门时被拉成时间切片。",
+    "method": "代码：不同列、条带或深度区域读取不同时刻的帧。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让时间差附着在门缝或帘后，而完整动作仍可读。",
+    "prompt": "固定空间中把条带映到不同时间帧，保留清晰的出入接点。",
+    "signals": [
+      "stationary-plate",
+      "physical-threshold",
+      "temporal-cue"
+    ],
+    "tool": "slit"
+  },
+  {
+    "id": "29",
+    "name": "视频反馈 Video Feedback",
+    "group": "故障、编码与数字物质",
+    "example": "空间不断把上一刻的自己缩小、旋转、吞进去，过去持续污染现在。",
+    "method": "代码：上一帧输出变换后与当前帧混合，再存入历史缓冲；可只作用于镜面或背景。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "30",
+    "name": "贫穷图像 Poor Image",
+    "group": "故障、编码与数字物质",
+    "example": "一段证据每传播一次就更模糊，传播越广，原貌越难辨认。",
+    "method": "代码／剪辑：按传播代数逐次降采样、压缩、裁切、加字幕，把受损版本继续作为下一轮输入。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "同一份影像历经复制后丢失关键证据。",
+    "prompt": "用有来源的嵌入屏幕逐次降采样，原片保留作比对。",
+    "signals": [
+      "recorded-medium",
+      "evidence-conflict",
+      "repeat-copy"
+    ],
+    "tool": "edit"
+  },
+  {
+    "id": "31",
+    "name": "操作性影像 Operational Images",
+    "group": "故障、编码与数字物质",
+    "example": "世界通过框、轨迹、评分识别人；无法分类的人开始无法开门、付款、被看见。",
+    "method": "代码＋合成：跟踪框、分割图、姿态或深度图参与剧情中的实际判断和空间响应。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "32",
+    "name": "点云／未完成世界",
+    "group": "故障、编码与数字物质",
+    "example": "房间只在被看见时长出表面，被遗忘的角落退回散点。",
+    "method": "三维／代码：从网格或深度图采样点，控制点密度与表面显现；大幅运镜优先用完整三维几何。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "33",
+    "name": "艳俗 Kitsch",
+    "group": "消费、艳俗与人工天堂",
+    "example": "狭小出租屋堆满假金、塑料水晶、奖杯、婚庆花束，幸福符号令人窒息。",
+    "method": "AI＋合成：先指定材料与道具，再生成布景；代码逐步增加装饰数量，保留人物真实表情。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "把对成功的渴求变成看得见的物件，留住人物自己的表情。",
+    "prompt": "选定几种材料，假金、塑料与丝绒各自有受光，按行为累积。",
+    "signals": [
+      "material-display",
+      "social-satire"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "34",
+    "name": "坎普 Camp",
+    "group": "消费、艳俗与人工天堂",
+    "example": "一场分手被演成加冕礼，厨房里的争吵拥有歌剧般的礼服与仪式。",
+    "method": "AI＋表演＋合成：夸张造型、严格站位、人工舞台光；让情感与过量形式形成张力。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "35",
+    "name": "波普艺术 Pop Art",
+    "group": "消费、艳俗与人工天堂",
+    "example": "同一张脸、同一件商品重复覆盖城市，人物逐渐成为自己的广告。",
+    "method": "代码：人物抠像、色阶压缩、网点、重复排列；包装和标语用准确排版制作。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "36",
+    "name": "极繁主义 Maximalism",
+    "group": "消费、艳俗与人工天堂",
+    "example": "每次炫耀都会增加一个装饰，最终房间再也容不下主人。",
+    "method": "三维／合成：从少量物件建立资产库，按事件实例化、堆叠；注意留出明确视觉焦点。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "37",
+    "name": "蒸汽波 Vaporwave",
+    "group": "消费、艳俗与人工天堂",
+    "example": "空购物中心、旧电脑界面、仿古雕像，构成一个已经过期的消费梦。",
+    "method": "AI＋代码：场景先统一年代和材料，再加入旧界面、扫描纹理与缓慢循环。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "38",
+    "name": "复古未来主义 Retrofuturism",
+    "group": "消费、艳俗与人工天堂",
+    "example": "旧时代想象的未来已经到来，但机器笨重、承诺落空。",
+    "method": "AI／三维：制定统一技术年代：旋钮、机械结构、显示方式、材料；避免随意混成泛科幻。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "39",
+    "name": "超真实／拟像 Hyperreality",
+    "group": "消费、艳俗与人工天堂",
+    "example": "样板房比真正的家更像家，人物开始选择住进广告里的生活。",
+    "method": "AI＋合成：复制并过度完善现实空间，逐渐抹去使用痕迹；关键时刻显露背板、重复纹理或无出口结构。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "40",
+    "name": "挪用与转义 Détournement",
+    "group": "消费、艳俗与人工天堂",
+    "example": "商场幸福广告被人物改写，原本劝消费的画面开始揭露债务与孤独。",
+    "method": "排版＋合成：保留熟悉的广告结构，改变文字、人物关系或声音；用场内屏幕、海报承载变化。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "41",
+    "name": "意大利电影新现实主义",
+    "group": "现实、日常与材料",
+    "example": "等工作、修车、赶公交、算饭钱；行动的阻力直接来自生活条件。",
+    "method": "实拍／受控AI：先写具体生活行为，再安排现实空间、自然光感与有停顿的表演；保留动作持续时间。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让换布、收钱、停一下等待的身体成本构成剧情。",
+    "prompt": "正常动作速度，跟手、物件、重心与真实现场声。",
+    "signals": [
+      "body-labour",
+      "physical-contact"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "42",
+    "name": "法国新现实主义",
+    "group": "现实、日常与材料",
+    "example": "整座城市由快递箱、废车、罐头和广告碎片组成；人被消费史包围。",
+    "method": "AI＋三维：建立物件库，用实例化、堆积、压缩和拼装构成空间。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "43",
+    "name": "贫穷艺术 Arte Povera",
+    "group": "现实、日常与材料",
+    "example": "华丽酒店被泥土、破布、煤和树枝接管，材料开始抵抗装修表面。",
+    "method": "AI＋三维／合成：少量触感鲜明的材料，配合缠绕、沉积和生长；让材料与人物发生接触。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "44",
+    "name": "物派 Mono-ha",
+    "group": "现实、日常与材料",
+    "example": "石头、玻璃、木板与身体的摆放关系形成压迫；一个小移动改变整个局面。",
+    "method": "实拍／三维：极少物件、准确比例和接触关系，以慢镜头或固定镜头突出重量与距离。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "45",
+    "name": "现成物／装配艺术",
+    "group": "现实、日常与材料",
+    "example": "家庭权威由奖状、旧家具、身份证复印件和父亲的工具拼成。",
+    "method": "摄影／AI＋三维：先收集有意义的物件，再做拼装；保留各材料原有纹理与尺度差。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "46",
+    "name": "撕贴／剥贴 Décollage",
+    "group": "现实、日常与材料",
+    "example": "撕掉广告露出旧广告，撕掉一个身份露出另一个身份。",
+    "method": "合成／三维：多层图像、撕裂遮罩、纸边阴影；需要卷边时用网格形变。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "一次撕除同时揭开旧说法，人物处境改变。",
+    "prompt": "纸边有实体投影。只改承载物内的遮罩，保留原人和环境。",
+    "signals": [
+      "stationary-plate",
+      "historical-trace",
+      "physical-threshold"
+    ],
+    "tool": "portal"
+  },
+  {
+    "id": "47",
+    "name": "过程艺术 Process Art",
+    "group": "现实、日常与材料",
+    "example": "每次争吵都会留下盐、灰、蜡或水渍，关系历史变成不可逆的沉积。",
+    "method": "代码／三维：累积遮罩或几何状态，让前一场的痕迹持续进入后一场。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "48",
+    "name": "自毁艺术 Auto-destructive Art",
+    "group": "现实、日常与材料",
+    "example": "纪念碑按自身规则腐蚀，人物越维护它，它越快瓦解。",
+    "method": "三维＋合成：预设完好与破坏状态，用侵蚀场控制材质和几何消失，变化绑定人物行为。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "49",
+    "name": "超现实主义 Surrealism",
+    "group": "梦境、情绪与主观世界",
+    "example": "抽屉里是海，门把手长在手掌上；日常物件按欲望与联想连接。",
+    "method": "AI＋合成：分别制作异常状态，用动作、形状、遮挡连接；把每次变形拆成明确起点和终点。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "50",
+    "name": "魔幻现实主义",
+    "group": "梦境、情绪与主观世界",
+    "example": "家人在缓慢涨水的客厅里照常吃饭，亡者回来只为修坏掉的灯。",
+    "method": "混合：现实表演与布景保持可信，单独加入持续成立的异常，人物按生活逻辑处理它。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让单个反常现象进入可信的生活秩序，给人物一个可见的发现或选择。",
+    "prompt": "以正常速度完成生活动作。让反常现象有单一、可重复的规则和可辨认的物质结果，周围环境与人继续按照现实规律行动。",
+    "signals": [
+      "credible-everyday",
+      "single-anomaly",
+      "material-consequence"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "51",
+    "name": "诡异感 Uncanny",
+    "group": "梦境、情绪与主观世界",
+    "example": "家里一切正常，只有照片中的人每次都站得更近一点。",
+    "method": "AI＋局部合成：保留大部分画面，仅改变熟悉对象的一个细节，并让变化逐次积累。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "52",
+    "name": "表现主义 Expressionism",
+    "group": "梦境、情绪与主观世界",
+    "example": "门框倾斜、影子巨大、街道尖锐，环境直接承受人物的精神压力。",
+    "method": "三维＋AI材质：先固定歪斜几何和光向，再做表面风格；人物可保持自然比例。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "53",
+    "name": "自主影子＊",
+    "group": "梦境、情绪与主观世界",
+    "example": "人物已经道歉，影子却继续攻击；嘴上同意，影子拒绝握手。",
+    "method": "合成：影子独立表演或用三维代理生成，再按地面、墙面透视投射。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "54",
+    "name": "镜像背叛＊",
+    "group": "梦境、情绪与主观世界",
+    "example": "人物转身后，镜中人仍看着观众；镜像提前做出真实决定。",
+    "method": "合成：现实与镜中表演分别制作，镜面四角定位，处理镜前遮挡和玻璃反光。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "55",
+    "name": "情绪性物理＊",
+    "group": "梦境、情绪与主观世界",
+    "example": "人越压抑，房间越窄；一句话说出口，天花板突然松开。",
+    "method": "三维／网格形变：人物单独保留，改变墙体、门窗与地面的几何，变化曲线跟随表演节拍。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "56",
+    "name": "通感式设计 Synaesthetic Design",
+    "group": "梦境、情绪与主观世界",
+    "example": "刺耳的话使墙上长出细刺，低音让灯光下沉，沉默使房间失去颜色。",
+    "method": "代码：提取音量、频段或音符事件，驱动形变、粒子、灯光和色彩，固定少量可辨识映射。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "57",
+    "name": "立体主义 Cubism",
+    "group": "绘画、文字与档案",
+    "example": "一次对话里同时看到人物的正面、侧面与背面，身份无法归于单一视角。",
+    "method": "合成／三维：多机位素材或多视图切成平面，按构图拼接；让视角变化对应不同叙述。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "58",
+    "name": "水墨空间",
+    "group": "绘画、文字与档案",
+    "example": "人物走过的地方才被墨迹画出来，遗忘处逐渐洇散。",
+    "method": "AI＋代码：制作纸纹和墨色层，使用扩散遮罩、边缘渗化、留白显现；人物可保持写实。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "59",
+    "name": "木刻／版画式影像",
+    "group": "绘画、文字与档案",
+    "example": "世界由坚硬黑白块组成，人物的道德选择表现为明暗边界变化。",
+    "method": "代码／合成：边缘提取、亮度分级、刻痕纹理和局部套色；按区域控制，避免细节全部丢失。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "60",
+    "name": "拼贴／剪纸世界",
+    "group": "绘画、文字与档案",
+    "example": "城市由旧照片、目录、报纸拼成，人物能剪掉一段人生。",
+    "method": "二维或2.5D：独立纸片、层间视差、纸边与接触阴影；翻折和撕裂单独制作。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "61",
+    "name": "具体诗／文字物质化",
+    "group": "绘画、文字与档案",
+    "example": "“对不起”变成堵门的砖，名字成为可以踩踏的台阶。",
+    "method": "代码＋三维：准确排版后挤出文字，或把文字作为粒子；加入遮挡、阴影与身体互动。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "62",
+    "name": "档案艺术／档案叙事",
+    "group": "绘画、文字与档案",
+    "example": "房间逐渐被出生证明、辞职信、账单、监控截图取代。",
+    "method": "排版＋合成：每类文件独立制作，跟踪到墙面和物件；每次只突出一条剧情信息。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "把账目或展签变成谁有权界定人物的物证。",
+    "prompt": "用可编辑排版，固定在一块已经可见的表面，给被拍摄的人一次反应。",
+    "signals": [
+      "recorded-medium",
+      "evidence-conflict",
+      "typographic-prop"
+    ],
+    "tool": "edit"
+  },
+  {
+    "id": "63",
+    "name": "擦除／涂黑美学",
+    "group": "绘画、文字与档案",
+    "example": "一个名字被涂黑，对应的人开始从照片、镜子和记忆里消失。",
+    "method": "代码／合成：文字遮盖、对象移除、背景修补，按同一规则逐场扩展。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "64",
+    "name": "官僚迷宫＊",
+    "group": "绘画、文字与档案",
+    "example": "每盖一个章，房间就多一道门；申请证明自己存在，最后只剩文件存在。",
+    "method": "代码＋三维：表格准确排版，空间模块按事件增加；印章、编号与门的出现严格同步。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "65",
+    "name": "泛灵式世界 Animistic World",
+    "group": "生态、尺度与物质规则",
+    "example": "衣柜拒绝打开，房屋会嫉妒，桌子把某个人的位置让出来。",
+    "method": "AI＋三维／合成：每个物件只设一种稳定行为，用小幅形变、声音和位移表现性格。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "66",
+    "name": "生物形态建筑",
+    "group": "生态、尺度与物质规则",
+    "example": "房间像器官，走廊像根系，城市拥有呼吸和代谢。",
+    "method": "三维＋AI材质：曲线、分枝、柔性网格构成结构，材质与微小运动补足生命感。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "67",
+    "name": "菌丝接管＊",
+    "group": "生态、尺度与物质规则",
+    "example": "被忽视的物件先发霉，被遗忘的人逐渐与植物共生。",
+    "method": "代码／三维：分枝生长、路径蔓延与材质扩散；生长从具体接触点开始。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "68",
+    "name": "矿化记忆＊",
+    "group": "生态、尺度与物质规则",
+    "example": "一句没说出口的话在喉间结晶，旧家具长出保存往事的矿层。",
+    "method": "三维＋合成：晶体实例化、表面生长和折射材质；人物身体部分用遮罩保护表演。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "69",
+    "name": "尺度异化",
+    "group": "生态、尺度与物质规则",
+    "example": "母亲的梳子像一座桥，父亲的钥匙堵住整条街，童年物件成为巨物。",
+    "method": "三维／合成：统一透视、地平线和接触阴影，用正常尺度的人作参照。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "70",
+    "name": "错置重力＊",
+    "group": "生态、尺度与物质规则",
+    "example": "雨横着下，衣服往天花板掉，只有某个人的东西仍服从正常重力。",
+    "method": "三维＋分层合成：分别设置运动方向和粒子力场，人物与环境分开处理。",
+    "priority": false,
+    "status": "三维待接"
+  },
+  {
+    "id": "71",
+    "name": "熵与秩序的可视化",
+    "group": "生态、尺度与物质规则",
+    "example": "一次争执让整齐空间分解；或者强迫性的秩序把所有生活痕迹清除。",
+    "method": "代码：物件位置从规则网格过渡到受控扰动，或反向排列；变化围绕一个叙事变量。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "72",
+    "name": "崇高 Sublime",
+    "group": "生态、尺度与物质规则",
+    "example": "人物面对无法穷尽的山体、机器、黑暗或城市，日常尺度失效。",
+    "method": "H3 或三维取明确的近景尺度参照，缓慢移开遮挡，保留远景稳定锚点与主景安全区。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让参照的尺度和视差帮助观众体会巨大的远景。",
+    "prompt": "同镜保留前景纹理与远景锚点，缓慢推近，在奇观主体贴边前交代结果。",
+    "signals": [
+      "scale-difference",
+      "human-scale-foreground",
+      "parallax"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "73",
+    "name": "布莱希特式间离",
+    "group": "剧场、叙述与形式",
+    "example": "人物争吵时，另一组人当场搬来“家庭幸福”的布景，迫使观众重新审视这场戏。",
+    "method": "实拍／合成：保留装置、换景和表演切换，让形式参与论述。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "戏台在正常景别里暴露出来，观众意识到谁在安排表演。",
+    "prompt": "帘后空间和正面舞台分层，用脚步与侧光接住同一人。",
+    "signals": [
+      "concealed-layer",
+      "stage-device"
+    ],
+    "tool": "edit"
+  },
+  {
+    "id": "74",
+    "name": "活画 Tableau Vivant",
+    "group": "剧场、叙述与形式",
+    "example": "一场家庭争执最终凝成审判图、受难图或婚礼合影。",
+    "method": "表演＋合成：精确站位、方向性光线、微小循环动作，逐步把行动收束成构图。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "把站位关系压成一幅同时可读的画。",
+    "prompt": "用中心线和非镜像调度让角色各自有进退，留动作余量。",
+    "signals": [
+      "ensemble",
+      "spatial-power"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "75",
+    "name": "剖面屋／玩偶屋",
+    "group": "剧场、叙述与形式",
+    "example": "一栋楼没有外墙，各家同时生活，关系被建筑网格显露出来。",
+    "method": "H3 或三维让楼层和用途同框，用通道、运送或交接把空间关系显出来，再用灯光、材质和真人尺度分清视线。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "在同一幅空间内把不同岗位或楼层之间的依赖变成可见证据。",
+    "prompt": "保住通道两端及其岗位，让同一物流沿既定方向移动。道具精确交接用近镜补足。",
+    "signals": [
+      "working-architecture",
+      "visible-transfer",
+      "material-split"
+    ],
+    "tool": "h3"
+  },
+  {
+    "id": "76",
+    "name": "黑箱剧场",
+    "group": "剧场、叙述与形式",
+    "example": "几束光就划出城市、卧室、牢笼；人物跨一步便改变社会身份。",
+    "method": "实拍／三维：黑背景、有限道具、独立光区，以走位和声音完成场景变化。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "77",
+    "name": "扩展电影 Expanded Cinema",
+    "group": "剧场、叙述与形式",
+    "example": "同一场审讯分布在墙、窗、衣服和屏幕上，各处时间不同。",
+    "method": "三维投射／合成：多个视频流贴到不同表面，各自独立时间轴；这是对扩展电影的一种影像转译。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "78",
+    "name": "结构电影 Structural Film",
+    "group": "剧场、叙述与形式",
+    "example": "同一动作被严格重复，每次只改变一个角度或时长；最后一次破例成为人物选择。",
+    "method": "代码剪辑：预设循环、镜头长度和画幅规则，让组织方式本身逐渐被观众察觉。",
+    "priority": false,
+    "status": "待试"
+  },
+  {
+    "id": "79",
+    "name": "叙事越界 Metalepsis",
+    "group": "剧场、叙述与形式",
+    "example": "人物走进字幕，拿走旁白使用的词，或者打开自己所在影片的画框。",
+    "method": "人物演出加二维合成。先建立片外字幕或画框的规则，再让角色实际改变边界或拿走一个可辨的词，保留动作接触和编辑痕迹。",
+    "priority": true,
+    "status": "当前可用",
+    "purpose": "当叙述者、标题或画框正在替角色决定其身份、权利或结局时，用一个越界动作夺回叙述权。",
+    "prompt": "先给观众读懂完整旧说法的时间。角色必须碰到真实可辨的边界，变化留下物体或可读的新句，并引发下一拍。 人物的视线先找到目标，动作从可识别的身体发出；手、服装、焦距和遮挡关系继承同一底片。调整字位去接实拍，不把身体放大去追效果。",
+    "signals": [
+      "established-narrator",
+      "readable-boundary",
+      "physical-crossing",
+      "changed-consequence",
+      "embodied-action",
+      "legible-scale"
+    ],
+    "tool": "metalepsis-2d"
+  },
+  {
+    "id": "80",
+    "name": "多联画／分屏复调",
+    "group": "剧场、叙述与形式",
+    "example": "同一句话同时呈现“说出来的”“想说的”“对方听到的”，三种现实互相冲突。",
+    "method": "代码／剪辑：共享时间轴、多个视点与声音层；让某一画面逐渐侵占其他画面。",
+    "priority": false,
+    "status": "当前可用",
+    "purpose": "让互相矛盾的证言拥有各自可辨的空间、动作和声源。",
+    "prompt": "只在观众已认识两方后使用分屏，听觉主次由视点转移。",
+    "signals": [
+      "conflicting-perspectives",
+      "identifiable-audio"
+    ],
+    "tool": "edit"
+  }
+]

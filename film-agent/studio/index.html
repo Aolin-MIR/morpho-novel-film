@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>电影制作台</title>
+<link rel="stylesheet" href="/studio.css">
+<script src="/studio.js" defer></script>
+</head>
+<body>
+<header class="mast">
+  <a class="wordmark" href="/">电影制作台</a>
+  <div class="header-end">
+    <a class="screening-nav" href="/screenings">成片</a>
+    <a class="screening-nav" href="/archive/screenings">制作归档</a>
+    <span class="live" id="live" role="status">正在读取进度</span>
+    <button id="refresh">刷新</button>
+  </div>
+</header>
+<main>
+  <nav class="projects" id="projects" aria-label="影片"></nav>
+  <section class="hero" id="hero">
+    <div class="hero-copy">
+      <div class="eyebrow" id="hero-label"></div>
+      <h1 id="book-title"></h1>
+      <p id="book-intent"></p>
+      <nav id="book-screenings" class="book-screenings" aria-label="观看本书影片" hidden></nav>
+      <dl class="counters" id="counters"></dl>
+    </div>
+    <figure class="hero-art" id="hero-art" hidden>
+      <img src="/art/stage.jpg" alt="茅枝婆靠近褪色的戏台布幕">
+      <figcaption>幕侧 <span>美术底片</span></figcaption>
+    </figure>
+  </section>
+  <nav class="sections" aria-label="制作内容">
+    <button data-view="shots" aria-pressed="true">镜头记录</button>
+    <button data-view="scripts" aria-pressed="false">台本</button>
+    <button data-view="notes" aria-pressed="false">导演记录</button>
+    <button data-view="methods" aria-pressed="false">美学方法库</button>
+  </nav>
+  <section id="shots">
+    <div class="section-head">
+      <h2>镜头记录</h2>
+      <label class="control"><span class="sr">搜索镜头</span><input id="shot-search" type="search" placeholder="搜镜号、段落或镜头"></label>
+      <label class="control"><span class="sr">制作状态</span><select id="state-filter"><option value="">全部状态</option><option value="running">制作中</option><option value="queued">待制作</option><option value="completed">已生成</option><option value="received">已存本地</option><option value="failed">待处理</option></select></label>
+    </div>
+    <div class="workbench">
+      <div id="shot-list" class="shot-list"></div>
+      <aside class="shot-detail" id="shot-detail" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="scripts" hidden>
+    <div class="section-head"><h2>台本</h2></div>
+    <div id="book-scripts" class="journal"></div>
+  </section>
+  <section id="notes" hidden>
+    <div class="section-head"><h2>导演记录</h2></div>
+    <div id="journal" class="journal"></div>
+  </section>
+  <section id="methods" hidden>
+    <div class="section-head">
+      <h2>美学方法库</h2>
+      <label class="control"><span class="sr">搜索美学方法</span><input id="method-search" type="search" placeholder="搜空间主义、故障艺术等"></label>
+      <label class="control"><span class="sr">方法状态</span><select id="method-filter"><option value="">全部方向</option><option value="重点">重点方法</option><option value="当前可用">当前可用</option><option value="待试">待试</option><option value="三维待接">三维待接</option></select></label>
+    </div>
+    <div class="methods" id="method-list"></div>
+  </section>
+</main>
+</body>
+</html>
