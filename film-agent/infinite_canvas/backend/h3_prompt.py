@@ -65,9 +65,11 @@ def compile_reference_prompt(shot, duration, picture_count, audio_count, motion)
                 if scope not in COMPOSITION_SCOPES:
                     raise ValueError('构图参考须使用已定义的画面、体形或衣着职责。')
                 purpose = COMPOSITION_SCOPES[scope]
+            elif role == 'character' and image.get('scope') == 'identity':
+                purpose = 'stable facial identity, age and visible facial geometry only. Outfit, light and pose follow the shot'
             else:
                 if 'scope' in image:
-                    raise ValueError('局部职责只用于构图参考。人物、场景和道具有各自固定职责。')
+                    raise ValueError('人物仅可指定固定身份职责，其他局部职责用于构图参考。')
                 purpose = SCOPED_ROLES[role]
             source = f'{subject} from {picture}' if subject != picture else picture
             definitions.append(f'{source}: {meaning}. Scope: {purpose}.')

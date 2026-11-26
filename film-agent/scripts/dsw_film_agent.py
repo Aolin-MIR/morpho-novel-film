@@ -131,6 +131,9 @@ def submit(db, spec):
     if kind == 'expert-shot-review':
         inputs = expert_inputs(db, project, inputs)
         dependencies = [inputs['render_id'], inputs['luna_review_id']]
+    if kind == 'render':
+        from film_identity_lock import bind as bind_identity
+        inputs = bind_identity(sys.modules[__name__], project, inputs)
     if kind in {'render', 'story-plan', 'publish-screening'}:
         versions = source_versions(kind, inputs)
         if kind == 'render':
@@ -591,7 +594,10 @@ def dialogue_evidence(inputs, out):
 
 
 def render(inputs, out):
+    from film_identity_lock import verify as verify_identity
     from render_h3_pilot import main as render_pilot
+
+    verify_identity(sys.modules[__name__], inputs)
 
     destination = out / 'shot.mp4'
     receipt = destination.with_suffix('.job.json')
@@ -621,7 +627,8 @@ def render(inputs, out):
         raise ValueError('H3 产物未包含同期声轨道。')
     return {'artifact': str(destination), 'sha256': fingerprint(destination),
             'width': video['width'], 'height': video['height'],
-            'comfy_id': json.loads(receipt.read_text())['id'], 'review': 'pending_review'}
+            'comfy_id': json.loads(receipt.read_text())['id'], 'review': 'pending_review',
+            **({'identity_lock': inputs['identity_lock']} if 'identity_lock' in inputs else {})}
 
 
 def expert_inputs(db, project, inputs):
